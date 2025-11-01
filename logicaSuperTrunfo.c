@@ -1,43 +1,69 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 2 - Comparação das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
-// Siga os comentários para implementar cada parte do desafio.
-
 int main() {
-    // Definição das variáveis para armazenar as propriedades das cidades
-    // Você pode utilizar o código do primeiro desafio
+    // Programa: Desafio Lógico - Super Trunfo
 
-    
-    // Cadastro das Cartas:
-    // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
-    // utilizando a função scanf para capturar as entradas.
-    // utilize o código do primeiro desafio
+    // Declarando os nomes das cidades
+    char cidade1[] = "Alagoas";
+    char cidade2[] = "Goiás";
 
-    // Exemplo:
-    // printf("Digite o código da cidade: ");
-    // scanf("%s", codigo);
-    // 
-    // (Repita para cada propriedade)
+    // Atributos da cidade 1 (Alagoas)
+    int populacao1 = 3300000;     // População de Alagoas
+    float pib1 = 70000.50;        // PIB de Alagoas
+    int pontosTuristicos1 = 15;   // Pontos turísticos de Alagoas
 
-    // Comparação de Cartas:
-    // Desenvolva a lógica de comparação entre duas cartas.
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
+    // Atributos da cidade 2 (Goiás)
+    int populacao2 = 7200000;     // População de Goiás
+    float pib2 = 160000.75;       // PIB de Goiás
+    int pontosTuristicos2 = 20;   // Pontos turísticos de Goiás
 
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
+    // Exibindo as cartas das cidades
+    printf("===== CARTAS SUPER TRUNFO =====\n\n");
 
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
+    printf("Carta 1: %s\n", cidade1);
+    printf("Populacao: %d\n", populacao1);
+    printf("PIB: %.2f\n", pib1);
+    printf("Pontos Turisticos: %d\n\n", pontosTuristicos1);
 
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+    printf("Carta 2: %s\n", cidade2);
+    printf("Populacao: %d\n", populacao2);
+    printf("PIB: %.2f\n", pib2);
+    printf("Pontos Turisticos: %d\n\n", pontosTuristicos2);
+
+    // Comparando as cidades com base no atributo principal: População
+    printf("===== RESULTADO DA RODADA =====\n");
+
+    // Estrutura condicional que decide quem venceu
+    if (populacao1 > populacao2) {
+        // Caso a população da cidade 1 seja maior
+        printf("%s venceu a rodada! (Populacao maior)\n", cidade1);
+    } 
+    else if (populacao2 > populacao1) {
+        // Caso a população da cidade 2 seja maior
+        printf("%s venceu a rodada! (Populacao maior)\n", cidade2);
+    } 
+    else {
+        // Caso as populações sejam iguais
+        printf("Empate! As duas cidades possuem a mesma populacao.\n");
+    }
+
+    // Exibindo o resumo comparativo
+    printf("\n===== RESUMO COMPARATIVO =====\n");
+    printf("%s -> Populacao: %d | PIB: %.2f | Pontos Turisticos: %d\n",
+           cidade1, populacao1, pib1, pontosTuristicos1);
+    printf("%s -> Populacao: %d | PIB: %.2f | Pontos Turisticos: %d\n",
+           cidade2, populacao2, pib2, pontosTuristicos2);
+
+    // Fim do programa
+    printf("\nFim da rodada!\n");
 
     return 0;
+
+    
 }
+
+Eu fiz esse programa em C pra simular uma rodada do Super Trunfo entre as cidades Alagoas e Goiás.
+Coloquei os dados das duas cidades, tipo população, PIB e pontos turísticos.
+Depois usei if e else pra comparar quem tem a população maior e mostrar quem ganhou.
+No final o programa mostra tudo na tela com printf.
+Fiz de um jeito bem simples só pra mostrar como funciona a comparação.
